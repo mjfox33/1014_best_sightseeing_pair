@@ -7,3 +7,9 @@ def test_example_1():
 def test_example_2():
     s = c.Solution()
     assert s.maxScoreSightseeingPair([1,2]) == 2
+
+def test_large_array():
+    s = c.Solution()
+    file_object = open('large_input_array.txt', 'r')
+    arr = [int(s) for s in file_object.read().splitlines()]
+    result = s.maxScoreSightseeingPair(arr)
